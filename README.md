@@ -1,1 +1,560 @@
-# porramet.pk2551.github.com
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Chitsanupong Rodmalee</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --navy: #081b35;
+    --blue: #102e52;
+    --gold: #d6b36a;
+    --white: #ffffff;
+    --light: #f4f6fa;
+    --text: #26364a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    color: var(--text);
+    background: var(--light);
+    line-height: 1.8;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(8,27,53,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(214,179,106,0.4);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--gold);
+    font-family: 'Kanit';
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+section {
+    padding: 100px 8%;
+    scroll-margin-top: 65px;
+}
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(120deg,rgba(8,27,53,.97),rgba(16,46,82,.86)),
+    url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-top: 120px;
+}
+
+.hero-content {
+    max-width: 1150px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-family: 'Kanit';
+    font-size: clamp(35px,5vw,65px);
+    line-height: 1.25;
+    color: var(--gold);
+    margin: 15px 0;
+}
+
+.hero h2 {
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.hero p {
+    color: #e1e8f0;
+    margin: 20px 0;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 6px 18px;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.hero-image img {
+    width: min(330px, 85%);
+    height: 420px;
+    object-fit: cover;
+    border: 5px solid var(--gold);
+    border-radius: 180px 180px 20px 20px;
+    box-shadow: 0 20px 50px #0008;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    background: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-family: 'Kanit';
+    font-size: 36px;
+    color: var(--navy);
+}
+
+.section-title span {
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: var(--gold);
+    margin: 12px auto;
+}
+
+.section-title p {
+    color: #778397;
+}
+
+.about-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 12px 12px 0 var(--gold);
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.05);
+    border: 1px solid #e8ebf0;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.1);
+}
+
+.info-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.info-list div {
+    padding: 12px;
+    background: #f5f7fa;
+    border-left: 3px solid var(--gold);
+    border-radius: 5px;
+}
+
+.info-list strong {
+    color: var(--navy);
+}
+
+.education {
+    background: white;
+}
+
+.edu-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.edu-box h3 {
+    color: var(--navy);
+    font-size: 23px;
+    margin: 15px 0;
+}
+
+.gpax {
+    display: inline-block;
+    background: var(--navy);
+    color: white;
+    padding: 20px 45px;
+    border-radius: 12px;
+    margin: 20px;
+}
+
+.gpax strong {
+    color: var(--gold);
+    font-size: 40px;
+    display: block;
+}
+
+.grade-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.grade {
+    background: #f5f7fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.grade strong {
+    color: var(--blue);
+    display: block;
+    font-size: 22px;
+}
+
+.reason {
+    background: var(--navy);
+    color: white;
+}
+
+.reason .section-title h2 {
+    color: white;
+}
+
+.reason-grid {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.reason .card {
+    text-align: center;
+    background: #102e52;
+    border: 1px solid #34506f;
+    color: white;
+}
+
+.reason .card h3 {
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.award-grid, .activity-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+}
+
+.award-card {
+    border-top: 4px solid var(--gold);
+}
+
+.award-card h3 {
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.date {
+    color: #9b7a35;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.activities {
+    background: white;
+}
+
+.activity-card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.skills {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.skill-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.skill-box h3 {
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.skill-box li {
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.goal {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+}
+
+.goal h2 {
+    color: var(--gold);
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.goal p {
+    max-width: 800px;
+    margin: auto;
+    color: #e0e8f2;
+}
+
+.thankyou {
+    min-height: 400px;
+    background: linear-gradient(135deg,#081b35,#173d65);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thankyou h2 {
+    font-size: clamp(35px,6vw,60px);
+    color: var(--gold);
+    font-family: 'Kanit';
+}
+
+.thankyou p {
+    margin-top: 15px;
+}
+
+footer {
+    background: #041326;
+    color: #aebdce;
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: .7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(max-width:850px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero-content, .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-image {
+        grid-row: 1;
+    }
+
+    .hero-image img {
+        height: 320px;
+    }
+
+    .about-img {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .reason-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .info-list {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+}
+
+@media(max-width:600px) {
+    section {
+        padding: 85px 6%;
+    }
+
+    .award-grid, .activity-grid, .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <div class="logo">CR. PORTFOLIO</div>
+    <ul>
+        <li><a href="#home">หน้าแรก</a></li>
+        <li><a href="#about">ประวัติ</a></li>
+        <li><a href="#education">การศึกษา</a></li>
+        <li><a href="#reason">เหตุผล</a></li>
+        <li><a href="#awards">ผลงาน</a></li>
+        <li><a href="#activities">กิจกรรม</a></li>
+        <li><a href="#goal">เป้าหมาย</a></li>
+    </ul>
+</nav>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+<div class="hero-content">
+    <div>
+        <span class="tag">WELCOME TO MY PORTFOLIO</span>
+        <h1>CHITSANUPONG<br>RODMALEE</h1>
+        <h2>แฟ้มสะสมผลงานเพื่อเข้าศึกษาต่อ</h2>
+        <p>
+            คณะนิติศาสตร์ มหาวิทยาลัยทักษิณ<br>
+            หลักสูตรนิติศาสตรบัณฑิต
+        </p>
+        <a href="#about" class="btn">รู้จักผมเพิ่มเติม →</a>
+    </div>
+    <div class="hero-image">
+        <img src="images/chitsanupong.jpg" alt="ชิษณุพงศ์ รสมาลี">
+    </div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="section-title">
+    <h2>ABOUT ME</h2>
+    <span></span>
+    <p>ประวัติส่วนตัว</p>
+</div>
+
+<div class="about-grid reveal">
+    <div class="about-img">
+        <img src="images/chitsanupong.jpg" alt="ภาพประวัติส่วนตัว">
+    </div>
+
+    <div>
+        <h2 style="color:#102e52;">นายชิษณุพงศ์ รสมาลี</h2>
+        <p>CHITSANUPONG RODMALEE</p>
+        <p>
+            ผมเป็นนักเรียนที่มีความสนใจด้านกฎหมาย การเมือง
+            และการปกครอง มีความมุ่งมั่นที่จะเรียนรู้เกี่ยวกับสิทธิ
+            เสรีภาพ ความยุติธรรม และบทบาทของกฎหมายในสังคม
+            พร้อมพัฒนาตนเองให้เป็นผู้ที่มีความรู้ควบคู่คุณธรรม
+        </p>
+
+        <div class="info-list">
+            <div><strong>อายุ:</strong> 17 ปี</div>
+            <div><strong>ระดับ:</strong> มัธยมศึกษาตอนปลาย</div>
+            <div><strong>โรงเรียน:</strong> ทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</div>
+            <div><strong>จังหวัด:</strong> นครศรีธรรมราช</div>
+            <div><strong>ความสนใจ:</strong> กฎหมายและการเมือง</div>
+            <div><strong>เป้าหมาย:</strong> คณะนิติศาสตร์</div>
+        </div>
+    </div>
+</di
